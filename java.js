@@ -1,8 +1,10 @@
-let adicionarAoBotao = document.getElementById('addToDo');
+let addAoClicarBotao = document.getElementById('addToDo');
 let ContainerToDo = document.getElementById('toDoContainer');
 let CampoNecessario = document.getElementById('inputField');
 
-adicionarAoBotao.addEventListener('click', function(){
+addAoClicarBotao.addEventListener('click', function(){
     let paragrafo = document.createElement('p')
+    paragrafo.innerText = CampoNecessario.value;
     ContainerToDo.appendChild(paragrafo);
+    CampoNecessario.value = ""
 })
